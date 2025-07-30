@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404: Identity Not Found</title>
+  <!-- 산세리프+필기체 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="A3.css">
+  <script src="A3.js" defer></script>
+</head>
+<body>
+  <!-- 메뉴바: scene1(인트로)만 숨기고, 2~11은 보이게 -->
+  <nav id="navbar">
+    <div class="navbar-wrap">
+      <h1 class="logo">ID Shell</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Scan</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="scene-container">
+    <!-- SCENE 1: Intro (메뉴바 없음, 하늘+그레이 배경) -->
+    <section id="scene1" class="scene active">
+      <div class="intro-bg">
+        <div class="intro-text">
+          <h2>Background</h2>
+          <p>
+            By 2040, the boundary between truth and fiction on the internet had collapsed.<br>
+            Leaked data and manipulated profiles became daily news.<br>
+            Digital literacy became essential, but even experts couldn't keep up.<br>
+            In this world, people protect themselves with ID Shell.<br><br>
+            Our protagonist is just one of many...
+          </p>
+        </div>
+        <div class="narration-box readable">
+          Strange things keep happening lately.<br>
+          I feel like my private data is everywhere...<br>
+          Maybe I need ID Shell after all.
+        </div>
+        <button id="enterButton">Enter ID Shell</button>
+      </div>
+    </section>
+    <!-- SCENE 2: 홈페이지 -->
+    <section id="scene2" class="scene">
+      <div class="poster-background">
+        <h1 class="glitch">WELCOME TO ID SHELL</h1>
+        <h2>LIVE INVISIBLE. LIVE FREE.</h2>
+        <p>Protect your identity before it’s sold.</p>
+        <button id="signInButton">SIGN IN</button>
+      </div>
+    </section>
+    <!-- SCENE 3: Sign In -->
+    <section id="scene3" class="scene">
+      <div class="signin-box">
+        <h2>Join ID Shell</h2>
+        <label for="username">Enter your ID name:</label>
+        <input type="text" id="username" maxlength="20">
+        <button id="submitName">Continue</button>
+        <p class="note">※ Your input is not shared. We do not monetize your name.</p>
+      </div>
+    </section>
+    <!-- SCENE 4: Scan Result (로딩/결과/버튼) -->
+    <section id="scene4" class="scene">
+      <h2>Analyzing Your Digital Exposure…</h2>
+      <div id="scanLoading">Loading...</div>
+      <div id="scanResult" class="hidden">
+        <ul>
+          <li>✔ Name, address, ID: LEAKED</li>
+          <li>✔ Search history: 98% EXPOSED</li>
+          <li>✔ Health data: PARTIALLY LEAKED</li>
+          <li>✔ Location records: TRACKING ACTIVE</li>
+        </ul>
+        <p class="alert">Your identity is 76% compromised.</p>
+        <button id="chatbotStart">Need Support?</button>
+      </div>
+      <div class="narration-box readable">
+        ...I can’t believe how much is out there about me.
+      </div>
+    </section>
+    <!-- SCENE 5: Chatbot (Next 버튼) -->
+    <section id="scene5" class="scene">
+      <div class="chat-window">
+        <div id="chatbox"></div>
+        <button id="nextChat">Next</button>
+      </div>
+      <div class="narration-box readable">Is this really happening to so many people...?</div>
+    </section>
+    <!-- SCENE 6: 실제 피해사례 -->
+    <section id="scene6" class="scene">
+      <h2>Victims’ Stories</h2>
+      <div class="case-list">
+        <div class="case-card">Lost my job after health records leaked. <br><span>- A former office worker</span></div>
+        <div class="case-card">Credit destroyed by a loan I never took.<br><span>- S. Park</span></div>
+        <div class="case-card">Tracked by my ex using my phone location logs.<br><span>- J. Kim</span></div>
+      </div>
+      <button id="seeReview">See User Reviews</button>
+      <div class="narration-box readable">
+        Am I next?
+      </div>
+    </section>
+    <!-- SCENE 7: 사용후기 -->
+    <section id="scene7" class="scene">
+      <h2>What Users Say</h2>
+      <div class="review-list">
+        <div class="review-card">“After joining ID Shell, my phone stopped buzzing at night.”</div>
+        <div class="review-card">“No more fake loans in my name.”</div>
+        <div class="review-card">“I feel a bit safer, but why do I feel watched?”</div>
+      </div>
+      <button id="getPlan">Get Plan Recommendation</button>
+      <div class="narration-box readable">
+        Could I trust this service?
+      </div>
+    </section>
+    <!-- SCENE 8: Chatbot 상담(구독 추천, Next) -->
+    <section id="scene8" class="scene">
+      <div class="chat-window">
+        <div id="plan-chatbox"></div>
+        <button id="nextPlanChat">Next</button>
+      </div>
+      <div class="narration-box readable">
+        I’m not sure what’s right anymore.
+      </div>
+    </section>
+    <!-- SCENE 9: Pricing Plan -->
+    <section id="scene9" class="scene">
+      <h2>Recommended Plan for You</h2>
+      <img src="pricing plan.jpg" alt="Pricing Plan">
+      <button id="subscribeBtn">Subscribe</button>
+      <div class="narration-box readable">
+        Is this what it takes to stay safe?
+      </div>
+    </section>
+    <!-- SCENE 10: 결제완료 -->
+    <section id="scene10" class="scene">
+      <h2>Subscription Complete</h2>
+      <div id="payment-loading">Processing...</div>
+      <div id="payment-done" class="hidden">
+        <p>Your plan is now active.<br>
+        Next billing date: 2040-08-13<br>
+        Auto-renewal: Every 13th of the month</p>
+        <button id="leaveShell">Leave ID Shell</button>
+      </div>
+      <div class="narration-box readable">
+        ...I never gave them my credit card.
+      </div>
+    </section>
+    <!-- SCENE 11: 404 Ending (메뉴바 보임) -->
+    <section id="scene11" class="scene">
+      <div class="whiteout">
+        <h1 class="error-code">404</h1>
+        <p class="error-text">Identity Not Found</p>
+        <div class="popup">Your data was enough.<br>Even your silence is monetized.</div>
+      </div>
+      <div class="narration-box readable">
+        How did they charge me? I only gave them my name...
+      </div>
+    </section>
+  </div>
+</body>
+</html>
